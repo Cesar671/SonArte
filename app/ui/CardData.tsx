@@ -3,6 +3,7 @@ import { Box,Container, Paper, Typography, Grid } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import { Slide } from 'react-awesome-reveal';
 interface CardDataProps{
     children: React.ReactNode
     title: string
@@ -40,8 +41,10 @@ return (
                     display:'none',
                   }
                 }}
-              >
+              ><Slide direction="right" triggerOnce>
                 <Image src={img} width={400} height={250} alt="" />
+              </Slide>
+                
               </Grid>
             </Grid>
             
@@ -60,10 +63,11 @@ return(<Grid container>
         
       }}
     >
+      <Slide direction="left" triggerOnce>
       <Image src={img} width={400} height={250} alt="" style={{
         justifySelf:"end",
         
-      }}/>
+      }}/></Slide>
     </Grid>
     <Grid size={6}
       sx={{

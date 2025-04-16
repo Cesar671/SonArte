@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^7.0.2",
     "next": "15.3.0",
     "react": "^19.0.0",
+    "react-awesome-reveal": "^4.3.1",
     "react-dom": "^19.0.0",
     "react-parallax": "^3.5.2",
     "styled-components": "^6.1.17"
