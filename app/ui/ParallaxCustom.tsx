@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Parallax } from 'react-parallax'
 import { Box, Typography } from '@mui/material'
 
@@ -11,12 +11,22 @@ interface ParallaxProps{
 }
 
 const ParallaxCustom:React.FC<ParallaxProps> = ({ children, img, vh, mw, opacity }) => {
+  const [opacity1, setOpacity] = useState(0);
   return (
  <div>
-    <Parallax style={{
-            }} bgImageStyle={{
+    <Parallax 
+            style={{
+              opacity: opacity1,
+              transition:"opacity 0.2s ease-out",
+              willChange: 'opacity',
+            }}
+            bgImageStyle={{
               maxWidth:mw
-            }} bgImage={img} strength={300} > 
+            }} 
+            bgImage={img} 
+            strength={300} 
+            onLoad={() => { setOpacity(1) }}
+            > 
               <Box
               sx={{
                 display:"flex",

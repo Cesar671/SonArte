@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <main>
       
-          <ParallaxCustom img="/home.webp" vh="80vh" opacity={0.8}
+          <ParallaxCustom img="/home.webp" vh="90vh" opacity={0.8}
             > 
             <Box
               sx={{

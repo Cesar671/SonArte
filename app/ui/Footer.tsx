@@ -37,6 +37,7 @@ const footer = () => {
                 display:"flex",
                 gap:"15px",
                 justifyContent:"center",
+                flexWrap:"wrap",
             }}
         >
             <ItemFooterIcon Icon={ FacebookRoundedIcon } name='Facebook'/>
@@ -113,13 +114,50 @@ const footer = () => {
                 sx={{
                     display:"flex",
                     alignItems:"center",
-                    gap:"20px"
+                    gap:"20px",
+                    flexWrap:"wrap",
                 }}
             >
                 <Image src="/icono.png" width={80} height={80} alt=''/>
                 <Image src="/nombre.png" width={150} height={40} alt=''/>
             </Box>
-            <Box>
+            <Box
+                sx={{
+                    '& .MuiButton-root':{
+                        color:"primary.contrastText",
+                        transition:"all 0.4s ease",
+                        borderRadius:0,
+                        '&::before':{
+                            content: "''",
+                            position: 'absolute',
+                            bottom: '0',
+                            right: '50%,', 
+                            width: '0', 
+                            height: '2px', 
+                            bgcolor: 'warning.main', 
+                            transform: 'translateX(50%)', 
+                            transition: 'width 0.3s ease',
+                        },
+                        '&:hover::before':{
+                            width:"50%",
+                        },
+                        '&::after':{
+                            content: "''",
+                            position: 'absolute',
+                            bottom: '0',
+                            left: '50%,', 
+                            width: '0', 
+                            height: '2px', 
+                            bgcolor: 'warning.main', 
+                            transform: 'translateX(-50%)', 
+                            transition: 'width 0.3s ease', 
+                        },
+                        '&:hover::after':{
+                            width:"50%",
+                        }
+                    }
+                }}
+            >
                 <Button
                     sx={{
                         color:"primary.contrastText",
@@ -195,6 +233,7 @@ const footer = () => {
                     display:"flex",
                     alignItems:"center",
                     gap:"5px",
+                    flexWrap:"wrap"
                 }}
             >
                 <strong>¡Aprende música hoy!</strong>

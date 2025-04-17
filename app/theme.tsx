@@ -14,7 +14,7 @@ const palette:ThemeOptions = {
         },
         background:{
             default:"#ffffffDD",
-            paper:"#DDDDDDEE",
+            paper:"#DDDDDDFA",
         },
         warning:{
             main:"#FFA500",
